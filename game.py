@@ -132,8 +132,8 @@ class Game:
 
     def create_obstacles(self, distance_min, max, spawn_rate, root_width, game_base_layer):
         cactus_image_list = []
-        for file_path in os.listdir('Slime Adventure/images/cactus/cactus'):
-            if os.path.isfile(os.path.join('Slime Adventure/images/cactus/cactus', file_path)):
+        for file_path in os.listdir('Slime-Adventure/images/cactus/cactus'):
+            if os.path.isfile(os.path.join('Slime-Adventure/images/cactus/cactus', file_path)):
                 cactus_image_list.append(file_path)
 
         if not self.obstacles_list:

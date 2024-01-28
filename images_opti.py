@@ -2,7 +2,7 @@ from PIL import *
 import os
 
 def img_dir(element):
-    elements = os.listdir(f'Slime Adventure/images/settings/{element}')
+    elements = os.listdir(f'Slime-Adventure/images/settings/{element}')
     return elements
 
 def check_opti():

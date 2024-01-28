@@ -26,7 +26,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("GUI Example")
 
-    image1 = Image.open("Slime Adventure/images/gui/title.png")
+    image1 = Image.open("Slime-Adventure/images/gui/title.png")
     width, height = image1.size
 
     gui = GUI(root, width, height)

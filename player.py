@@ -26,7 +26,7 @@ class Player:
         self.skin_list = []
         self.start_time = time.time()
 
-        self.skin = ImageTk.PhotoImage(Image.open(f"Slime Adventure/images/slime/{self.color}/walk/1.png").resize((self.size, self.size), Image.LANCZOS))
+        self.skin = ImageTk.PhotoImage(Image.open(f"Slime-Adventure/images/slime/{self.color}/walk/1.png").resize((self.size, self.size), Image.LANCZOS))
     
     def change_color(self, color):
         self.color = color
@@ -37,7 +37,7 @@ class Player:
     def update_skins(self, tick_image):
         end_time = time.time()
         if not self.skin_list:
-            self.skin_list = [ImageTk.PhotoImage(Image.open(f"Slime Adventure/images/slime/{self.color}/{self.state}/{i}.png").resize((self.size, self.size), Image.LANCZOS)) for i in range(1, 3)]
+            self.skin_list = [ImageTk.PhotoImage(Image.open(f"Slime-Adventure/images/slime/{self.color}/{self.state}/{i}.png").resize((self.size, self.size), Image.LANCZOS)) for i in range(1, 3)]
         self.skin = self.skin_list[tick_image-1]
 
     def dead(self, cactus_list):

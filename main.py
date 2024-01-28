@@ -27,14 +27,14 @@ def speed(n):
 
 def read_highscore():
     try:
-        with open('Slime Adventure/highscore.yml', 'r') as fichier:
+        with open('Slime-Adventure/highscore.yml', 'r') as fichier:
             highscore = yaml.safe_load(fichier)
             return highscore
     except FileNotFoundError:
         return 0
 
 def write_highscore(new_highscore):
-    with open('Slime Adventure/highscore.yml', 'w') as fichier:
+    with open('Slime-Adventure/highscore.yml', 'w') as fichier:
         yaml.dump(new_highscore, fichier)
 
 # Player binding
@@ -138,8 +138,8 @@ def update_game():
 
 def create_obstacles(obstacles_list, distance_min, max, spawn_rate):
     cactus_image_list = []
-    for file_path in os.listdir('Slime Adventure/images/cactus/cactus'):
-        if os.path.isfile(os.path.join('Slime Adventure/images/cactus/cactus', file_path)):
+    for file_path in os.listdir('Slime-Adventure/images/cactus/cactus'):
+        if os.path.isfile(os.path.join('Slime-Adventure/images/cactus/cactus', file_path)):
             cactus_image_list.append(file_path)
 
     if not obstacles_list:
@@ -152,9 +152,9 @@ def create_obstacles(obstacles_list, distance_min, max, spawn_rate):
 
 # Window
 root = Tk()
-root.iconphoto(False, PhotoImage(file='Slime Adventure/images/slime/green/walk/1.png'))
+root.iconphoto(False, PhotoImage(file='Slime-Adventure/images/slime/green/walk/1.png'))
 root.geometry(f'{ROOT_WIDTH}x{ROOT_HEIGHT}')
-root.title('Slime Adventure')
+root.title('Slime-Adventure')
 fullscreen = True
 root.attributes('-fullscreen', fullscreen)
 root.bind('<Key>', on_key)

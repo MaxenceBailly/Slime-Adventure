@@ -26,9 +26,9 @@ def on_key(event):
 
 # Window
 root = Tk()
-root.iconphoto(False, PhotoImage(file='Slime Adventure/images/slime/green/walk/1.png'))
+root.iconphoto(False, PhotoImage(file='Slime-Adventure/images/slime/green/walk/1.png'))
 root.geometry(f'{ROOT_WIDTH}x{ROOT_HEIGHT}')
-root.title('Slime Adventure')
+root.title('Slime-Adventure')
 fullscreen = True
 root.attributes('-fullscreen', fullscreen)
 root.bind('<Key>', on_key)

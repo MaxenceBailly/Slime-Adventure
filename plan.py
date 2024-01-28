@@ -7,7 +7,7 @@ class Plan:
         self.canvas = canvas
         self.ROOT_WIDTH = ROOT_WIDTH
         self.name = name
-        self.folder = f'Slime Adventure/images/settings/{folder}'
+        self.folder = f'Slime-Adventure/images/settings/{folder}'
         self.y = y
         self.distance_min = distance_min
         self.distance_max = distance_max
@@ -27,10 +27,10 @@ class Plan:
             entities_list[self.name] = len(self.element_list)
     
     def get_elements(self):
-        dir_path = f'Slime Adventure/images/settings/{self.name}'
+        dir_path = f'Slime-Adventure/images/settings/{self.name}'
         for file_path in os.listdir(dir_path):
             if os.path.isfile(os.path.join(dir_path, file_path)):
-                self.image_element_list.append(ImageTk.PhotoImage(Image.open(f"Slime Adventure/images/settings/{self.name}/{file_path}").resize((self.element_width, self.element_height), Image.LANCZOS)))
+                self.image_element_list.append(ImageTk.PhotoImage(Image.open(f"Slime-Adventure/images/settings/{self.name}/{file_path}").resize((self.element_width, self.element_height), Image.LANCZOS)))
 
     def update(self):
         for i, element in enumerate(self.element_list):
